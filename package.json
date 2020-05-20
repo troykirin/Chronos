@@ -8,6 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "eslint-plugin-react-native": "^3.8.1",
     "expo": "~37.0.3",
     "global": "^4.4.0",
     "react": "~16.9.0",
