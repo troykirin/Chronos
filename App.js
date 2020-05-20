@@ -1,5 +1,11 @@
 import React from "react";
+import { createStackNavigator, createAppContainer } from "react-navigation";
+import Home from "./src/screens/Home";
 import { StyleSheet, Text, View } from "react-native";
+
+//For later use, other two screens in AppNavigator
+import AddItem from "./src/screens/AddItem";
+import List from "./src/screens/List";
 
 export default function App() {
   return (
