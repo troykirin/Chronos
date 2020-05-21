@@ -11,6 +11,7 @@ web-report/
 .expo/*
 expo/*
 .expo/packager-info.json
+./.expo/*
 
 # macOS
 .DS_Store
