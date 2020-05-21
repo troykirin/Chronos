@@ -1,5 +1,4 @@
 node_modules/**/*
-.expo/*
 npm-debug.*
 *.jks
 *.p8
@@ -9,7 +8,9 @@ npm-debug.*
 *.orig.*
 web-build/
 web-report/
+.expo/*
 expo/*
+.expo/packager-info.json
 
 # macOS
 .DS_Store
