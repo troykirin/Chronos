@@ -18,3 +18,4 @@ expo/*
 .expo/packager-info.json
 
 .expo/
+config.js
