@@ -6,6 +6,7 @@ import { StyleSheet, Text, View } from "react-native";
 //Screens
 import HomeScreen from "./src/screens/Home";
 import ProfileScreen from "./src/screens/Profile";
+import LoginScreen from "./src/screens/Login";
 
 // create app navigator
 
@@ -14,6 +15,7 @@ const Stack = createStackNavigator();
 function RootStack() {
   return (
     <Stack.Navigator>
+      <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="Profile" component={ProfileScreen} />
     </Stack.Navigator>
