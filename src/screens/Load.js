@@ -5,7 +5,7 @@ export class LoadingScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text> Loading Screen </Text>
+        <ActivityIndicator />
       </View>
     );
   }
