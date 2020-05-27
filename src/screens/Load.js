@@ -16,16 +16,15 @@ class LoadingScreen extends Component {
   //Else go to LoginPage
 
   componentDidMount() {
-    this.simpleFunction();
+    this.checkIfLoggedIn();
   }
 
-  simpleFunction = () => {
-    this.props.navigation.navigate("Profile");
-  };
-
   checkIfLoggedIn = () => {
-    const [initializing, setInitializing] = useState(true);
-    const [user, setUser] = useState();
+    // const [initializing, setInitializing] = useState(true);
+    // const [user, setUser] = useState(true);
+
+    // const user = useState(false);
+    const user = false;
 
     if (user) {
       this.props.navigation.navigate("Home");
@@ -38,7 +37,7 @@ class LoadingScreen extends Component {
     return (
       <View style={styles.container}>
         <Button
-          title="SignInWithGoogle"
+          title="Skip Loading Page"
           onPress={() => this.props.navigation.navigate("Login")}
         ></Button>
       </View>
