@@ -1,33 +1,53 @@
 import React, { Component } from "react";
-import { View, Text, Button, setState, StyleSheet } from "react-native";
-import { TouchableHighlightBase } from "react-native";
+import { View, Text, Button, setState, StyleSheet, Input } from "react-native";
+
+import Loader from "../components/Loading";
 
 //On Login Press, change login state to true
 
 class LoginScreen extends Component {
   constructor(props) {
     super(props);
-    this.state = { text: "Logged out.", mimin: "", login: false };
+    this.state = {
+      text: "Logged out.",
+      mimin: "",
+      login: false,
+      loading: false,
+      username: "",
+      password: "",
+    };
   }
 
+  getEmail = () => {};
+
+  getPassword = () => {};
+
   onButtonPress = () => {
-    if (this.state.text === "Logged out.") {
-      this.setState({ text: "Logged in." });
+    if (this.state.login === false) {
+      this.setState({ text: "Logging in..." });
+      this.setState({ login: true });
+      console.log("State was false, now changed to true.");
+      <Loader></Loader>;
+      console.log("Running Loader.");
     } else {
-      this.setState({ text: "Logged out." });
+      console.log("State is true.");
+      this.setState({ text: "Error occured. Your already logged in." });
     }
   };
 
   render() {
     return (
       <View>
-        <Text style={styles.header}>Welcome to Chronos App!</Text>
+        <Loader loading={this.state.loading}></Loader>
+        <Text style={styles.header}>Chronos TimeTracker</Text>
         <Text style={styles.loginText}>Email</Text>
         <Text style={styles.loginText}>Password</Text>
-        <Button title="Login" onPress={() => this.onButtonPress()}></Button>
-        <Text style={styles.loginStatus}>
-          You are currently: {this.state.text}
-        </Text>
+        <Button
+          title="Login"
+          onPress={() => this.onButtonPress()}
+          containerViewStyle={{ width: "100%", marginBottom: 20 }}
+        ></Button>
+        <Text style={styles.loginStatus}>{this.state.text}</Text>
       </View>
     );
   }
