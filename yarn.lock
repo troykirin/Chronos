@@ -1486,14 +1486,19 @@
   resolved "https://registry.yarnpkg.com/@react-native-firebase/app-types/-/app-types-6.7.2.tgz#d2e1530af5702e00578914b41468898c10d3289c"
   integrity sha512-pIwc6e0ZINw6PJqNVsAxzOVJUDg6au2TdulY+ZOYQ11SPDs5I2n9likoGrElPmJjajT4s9h87uz/6PWP2k9PxQ==
 
-"@react-native-firebase/app@^7.0.1":
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/app/-/app-7.0.1.tgz#9cf1836138e9ef3770139a9d3ce35d43c5c53bf1"
-  integrity sha512-OTjTSxk2erJKCuURdN7cwc6wB7SFyBPuuFFDoKl3tg7NdQQS1vDNor2uvFC4WSjfDiaR4/UUNZEBtwtOuG1Fwg==
+"@react-native-firebase/app@^7.1.0":
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/app/-/app-7.1.0.tgz#df56260b7861b700c5888a3865b217e17536dbff"
+  integrity sha512-C/SCrU/zzlYVUrqFar+a7zQ1qN01I39LREzD098Pl6gPi8ONhd5bda8ZX0Qq7fRwNmSZlQ1j93VLysagt41woA==
   dependencies:
     "@react-native-firebase/app-types" "6.7.2"
     opencollective-postinstall "^2.0.1"
     superstruct "^0.6.2"
+
+"@react-native-firebase/auth@^7.1.0":
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/auth/-/auth-7.1.0.tgz#72911dd5c303df5b0239125f7874582fb7a5e3c6"
+  integrity sha512-XTzoBu5LdJECMVAVAFjTmLLRWsBFZQp/ygCKCLi49RaFwlct0WSYBWnk8qLJLmkFLGY4D1WAFaN1rvWlQZ2cLA==
 
 "@react-navigation/core@^3.7.6":
   version "3.7.6"
@@ -3749,6 +3754,13 @@ expo-font@~8.1.0:
   dependencies:
     fbjs "1.0.0"
     fontfaceobserver "^2.1.0"
+
+expo-google-sign-in@~8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/expo-google-sign-in/-/expo-google-sign-in-8.1.0.tgz#87f609f9250fea02ea5373286381f95f99c46187"
+  integrity sha512-ek/na9xL4yS76lqGwm79i1LLdqw8VDbr5ywd9l+ffR68r5MSIS18iz0cZVPsLH5W0V6QT8FnzqMqW0luFMCzAg==
+  dependencies:
+    invariant "^2.2.4"
 
 expo-keep-awake@~8.1.0:
   version "8.1.0"
