@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, Text, Button, setState, StyleSheet, Input } from "react-native";
 
-import Loader from "../components/Loading";
+import Loader from "../components/Loader";
 
 //On Login Press, change login state to true
 
@@ -22,13 +22,15 @@ class LoginScreen extends Component {
 
   getPassword = () => {};
 
-  onButtonPress = () => {
+  onButtonPress = (query) => {
     if (this.state.login === false) {
+      this.setState({ loading: true });
       this.setState({ text: "Logging in..." });
       this.setState({ login: true });
       console.log("State was false, now changed to true.");
+
+      console.log("Start loading animation.");
       <Loader></Loader>;
-      console.log("Running Loader.");
     } else {
       console.log("State is true.");
       this.setState({ text: "Error occured. Your already logged in." });
@@ -44,7 +46,7 @@ class LoginScreen extends Component {
         <Text style={styles.loginText}>Password</Text>
         <Button
           title="Login"
-          onPress={() => this.onButtonPress()}
+          onPress={() => this.onButtonPress("test")}
           containerViewStyle={{ width: "100%", marginBottom: 20 }}
         ></Button>
         <Text style={styles.loginStatus}>{this.state.text}</Text>
