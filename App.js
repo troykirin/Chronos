@@ -8,7 +8,7 @@ import LoadingScreen from "./src/screens/Load";
 import HomeScreen from "./src/screens/Home";
 import LoginScreen from "./src/screens/Login";
 import ProfileScreen from "./src/screens/Profile";
-// import DashboardScreen from "./src/screens/Dashboard";
+import SettingsScreen from "./src/screens/Settings";
 
 // firebase
 import firebase from "firebase";
@@ -24,7 +24,7 @@ function RootStack() {
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="Profile" component={ProfileScreen} />
-      {/* <Stack.Screen name="Dashboard" component={DashboardScreen} /> */}
+      <Stack.Screen name="Settings" component={SettingsScreen} />
     </Stack.Navigator>
   );
 }

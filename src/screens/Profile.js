@@ -6,6 +6,10 @@ function ProfileScreen({ navigation }) {
     <View>
       <Text>Welcome to Profile Screen!</Text>
       <Button title="Go Back" onPress={() => navigation.goBack()}></Button>
+      <Button
+        title="Go Settings"
+        onPress={() => navigation.navigate("Settings")}
+      ></Button>
       <Image
         style={styles.image}
         source={require("../../assets/profile_pic.jpg")}
