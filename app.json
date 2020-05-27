@@ -2,11 +2,7 @@
   "expo": {
     "name": "Chronos",
     "slug": "Chronos",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,11 +14,15 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.kirin.chronos",
+      "config": {
+        "googleSignIn": {
+          "reservedClientId": "com.googleusercontent.apps.200297086351-7oimgk6vm654bgkkuninkfrtl72vquht"
+        }
+      }
     }
   }
 }
