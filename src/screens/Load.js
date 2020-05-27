@@ -1,11 +1,33 @@
 import React, { Component } from "react";
-import { Text, View, ActivityIndicator, StyleSheet } from "react-native";
+import {
+  Text,
+  View,
+  ActivityIndicator,
+  StyleSheet,
+  Button,
+} from "react-native";
+import { useState, useEffect } from "react";
+// import auth from "@react-native-firebase/auth";
 
-export class LoadingScreen extends Component {
+class LoadingScreen extends Component {
+  checkIfLoggedIn = () => {
+    const [initializing, setInitializing] = useState(true);
+    const [user, setUser] = useState();
+
+    if (user) {
+      this.props.navigation.navigate("Home");
+    } else {
+      this.props.navigation.navigate("Login");
+    }
+  };
+
   render() {
     return (
       <View style={styles.container}>
-        <ActivityIndicator />
+        <Button
+          title="SignInWithGoogle"
+          onPress={() => this.props.navigation.navigate("Login")}
+        ></Button>
       </View>
     );
   }
