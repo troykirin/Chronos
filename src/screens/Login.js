@@ -22,18 +22,27 @@ class LoginScreen extends Component {
 
   getPassword = () => {};
 
-  onButtonPress = (query) => {
+  onButtonPress = () => {
     if (this.state.login === false) {
       this.setState({ loading: true });
-      this.setState({ text: "Logging in..." });
       this.setState({ login: true });
+      this.setState({ text: "Logging in..." });
       console.log("State was false, now changed to true.");
 
       console.log("Start loading animation.");
       <Loader></Loader>;
+
+      console.log("Running settimeout");
+      setTimeout(() => {
+        this.setState({ loading: false });
+        this.props.navigation.navigate("Profile");
+      }, 2500);
     } else {
       console.log("State is true.");
-      this.setState({ text: "Error occured. Your already logged in." });
+      this.setState({
+        text:
+          "Logic error occured. Your already logged in. How'd you get here?",
+      });
     }
   };
 
@@ -46,7 +55,7 @@ class LoginScreen extends Component {
         <Text style={styles.loginText}>Password</Text>
         <Button
           title="Login"
-          onPress={() => this.onButtonPress("test")}
+          onPress={() => this.onButtonPress()}
           containerViewStyle={{ width: "100%", marginBottom: 20 }}
         ></Button>
         <Text style={styles.loginStatus}>{this.state.text}</Text>
