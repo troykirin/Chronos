@@ -10,6 +10,15 @@ import { useState, useEffect } from "react";
 // import auth from "@react-native-firebase/auth";
 
 class LoadingScreen extends Component {
+  //on component mount go straight to profile
+  componentDidMount() {
+    this.simpleFunction();
+  }
+
+  simpleFunction = () => {
+    this.props.navigation.navigate("Profile");
+  };
+
   checkIfLoggedIn = () => {
     const [initializing, setInitializing] = useState(true);
     const [user, setUser] = useState();
