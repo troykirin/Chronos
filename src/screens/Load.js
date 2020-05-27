@@ -10,7 +10,11 @@ import { useState, useEffect } from "react";
 // import auth from "@react-native-firebase/auth";
 
 class LoadingScreen extends Component {
-  //on component mount go straight to profile
+  //When Loading Screen Mounts, display an image / animation
+  //Check if user is logged in or not
+  //If state is logged in, then go to Home Page
+  //Else go to LoginPage
+
   componentDidMount() {
     this.simpleFunction();
   }
