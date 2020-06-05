@@ -42,7 +42,7 @@ class HomeScreen extends Component {
 
   render() {
     // Get Params from previous screen
-    const { test } = this.props.route.params;
+    const { name } = this.props.route.params;
 
     return (
       <View style={styles.container}>
@@ -51,11 +51,7 @@ class HomeScreen extends Component {
           onPress={() => this.props.navigation.navigate("Profile")}
         ></Button>
 
-        {/* TESTING AREA */}
-        <Text>Test result: {this.props.route.params.test}</Text>
-        <Text>params.test stringify: {JSON.stringify(test)}</Text>
-        <Text> params.test: {test}</Text>
-        {/* END */}
+        <Text>Welcome home, {name}</Text>
 
         <Button
           title="Increment"
