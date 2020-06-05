@@ -6,7 +6,9 @@ class HomeScreen extends Component {
   constructor(props) {
     super(props);
     this.state = { count: 0 };
-    console.log(props.color);
+
+    // check for username passed
+    // this.test_param_pass();
 
     // ### testing
     // var params = props.navigation.state.params.array;
@@ -24,6 +26,14 @@ class HomeScreen extends Component {
 
   print_count = () => {
     console.log(this.state.count);
+    console.log(this.props.test);
+  };
+
+  test_param_pass = (route, navigation) => {
+    console.log("Testing...");
+    // Grab params from navigation
+    const { test } = this.props.navigation.navigate.params;
+    // const { test } = route.params;};
   };
 
   render() {
@@ -37,7 +47,8 @@ class HomeScreen extends Component {
         {/* TESTING AREA */}
         {/* <Text>Welcome Home, {JSON.stringify(username)}</Text> */}
         {/* <Text>Placeholder</Text> */}
-        <Text>{this.props.color}</Text>
+        {/* <Text>test: {JSON.stringify(test)}</Text> */}
+        <Text>{this.props.route.params.test}</Text>
         {/* END */}
 
         <Button

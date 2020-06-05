@@ -36,11 +36,14 @@ class LoginScreen extends Component {
       console.log("Running settimeout");
       setTimeout(() => {
         this.setState({ loading: false });
+
         // navigate to HomeScreen and pass data
         this.props.navigation.navigate("Home", {
-          username: "unit_test_pass",
+          test: "unit_test_pass",
+          name: "troy",
         });
-        console.log(this.state.username);
+
+        console.log("Username incoming: " + this.state.username);
       }, 20);
     } else {
       console.log("State is true.");
@@ -66,7 +69,7 @@ class LoginScreen extends Component {
           onPress={() => this.onButtonPress()}
           containerViewStyle={{ width: "100%", marginBottom: 20 }}
         ></Button>
-        <HomeScreen color="green" />
+
         <Text style={styles.loginStatus}>{this.state.text}</Text>
       </View>
     );
