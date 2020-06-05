@@ -6,11 +6,24 @@ class HomeScreen extends Component {
   constructor(props) {
     super(props);
     this.state = { count: 0 };
+    console.log(props.color);
+
+    // ### testing
+    // var params = props.navigation.state.params.array;
+    //  // get params from previous screen
+    //   getParams = ({ route, navigation }) => {
+    //     const { username } = route.params;
+    //
   }
 
   // Function to decrease state of 'count' by 1
   decrement = () => {
     this.setState({ count: this.state.count - 1 });
+    this.print_count();
+  };
+
+  print_count = () => {
+    console.log(this.state.count);
   };
 
   render() {
@@ -21,11 +34,18 @@ class HomeScreen extends Component {
           onPress={() => this.props.navigation.navigate("Profile")}
         ></Button>
 
-        <Text>Welcome Home! </Text>
+        {/* TESTING AREA */}
+        {/* <Text>Welcome Home, {JSON.stringify(username)}</Text> */}
+        {/* <Text>Placeholder</Text> */}
+        <Text>{this.props.color}</Text>
+        {/* END */}
 
         <Button
           title="Increment"
-          onPress={() => this.setState({ count: this.state.count + 1 })}
+          onPress={() => {
+            this.setState({ count: this.state.count + 1 });
+            this.print_count();
+          }}
         ></Button>
 
         <Button title="Decrease" onPress={() => this.decrement()}></Button>

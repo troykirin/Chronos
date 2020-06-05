@@ -66,6 +66,7 @@ class LoginScreen extends Component {
           onPress={() => this.onButtonPress()}
           containerViewStyle={{ width: "100%", marginBottom: 20 }}
         ></Button>
+        <HomeScreen color="green" />
         <Text style={styles.loginStatus}>{this.state.text}</Text>
       </View>
     );
