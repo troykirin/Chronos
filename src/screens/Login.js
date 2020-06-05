@@ -39,8 +39,7 @@ class LoginScreen extends Component {
 
         // navigate to HomeScreen and pass data
         this.props.navigation.navigate("Home", {
-          test: "PASS",
-          name: "troy",
+          username: this.state.username,
         });
 
         console.log("Username incoming: " + this.state.username);

@@ -42,7 +42,7 @@ class HomeScreen extends Component {
 
   render() {
     // Get Params from previous screen
-    const { name } = this.props.route.params;
+    const { username } = this.props.route.params;
 
     return (
       <View style={styles.container}>
@@ -51,7 +51,7 @@ class HomeScreen extends Component {
           onPress={() => this.props.navigation.navigate("Profile")}
         ></Button>
 
-        <Text>Welcome home, {name}</Text>
+        <Text>Welcome home, {username}</Text>
 
         <Button
           title="Increment"
