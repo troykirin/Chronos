@@ -7,25 +7,18 @@ class HomeScreen extends Component {
     super(props);
     this.state = { count: 0 };
 
-    // check for username passed
+    // check for params passing
     this.test_param_pass();
   }
 
-  // Function to decrease state of 'count' by 1
-  decrement = () => {
-    this.setState({ count: this.state.count - 1 });
-    this.print_count();
-  };
-
-  print_count = () => {
-    console.log(this.state.count);
-    console.log(this.props.test);
-  };
-
+  // #Dev Tests
   test_param_pass = (route, navigation) => {
-    console.log("Testing...");
+    console.log("Testing param passing between screens...");
+
     // Grab params from navigation
     const { test } = this.props.route.params;
+
+    // return logic
     if (test != undefined) {
       console.log(true);
     } else {
@@ -33,7 +26,24 @@ class HomeScreen extends Component {
     }
   };
 
+  // #Methods
+
+  // Function to decrease state of 'count' by 1
+  decrement = () => {
+    this.setState({ count: this.state.count - 1 });
+    this.print_count();
+  };
+
+  // Print current count
+  print_count = () => {
+    console.log(this.state.count);
+    console.log(this.props.test);
+  };
+
   render() {
+    // Get Params from previous screen
+    const { test } = this.props.route.params;
+
     return (
       <View style={styles.container}>
         <Button
@@ -43,6 +53,7 @@ class HomeScreen extends Component {
 
         {/* TESTING AREA */}
         <Text>Test result: {this.props.route.params.test}</Text>
+        <Text>Params: {JSON.stringify(test)}</Text>
         {/* END */}
 
         <Button
