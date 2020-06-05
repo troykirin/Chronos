@@ -48,7 +48,9 @@ class HomeScreen extends Component {
       <View style={styles.container}>
         <Button
           title="Go to Profile"
-          onPress={() => this.props.navigation.navigate("Profile")}
+          onPress={() =>
+            this.props.navigation.navigate("Profile", { username: username })
+          }
         ></Button>
 
         <Text>Welcome home, {username}</Text>
