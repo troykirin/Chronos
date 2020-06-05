@@ -8,14 +8,7 @@ class HomeScreen extends Component {
     this.state = { count: 0 };
 
     // check for username passed
-    // this.test_param_pass();
-
-    // ### testing
-    // var params = props.navigation.state.params.array;
-    //  // get params from previous screen
-    //   getParams = ({ route, navigation }) => {
-    //     const { username } = route.params;
-    //
+    this.test_param_pass();
   }
 
   // Function to decrease state of 'count' by 1
@@ -32,8 +25,12 @@ class HomeScreen extends Component {
   test_param_pass = (route, navigation) => {
     console.log("Testing...");
     // Grab params from navigation
-    const { test } = this.props.navigation.navigate.params;
-    // const { test } = route.params;};
+    const { test } = this.props.route.params;
+    if (test != undefined) {
+      console.log(true);
+    } else {
+      console.log(false);
+    }
   };
 
   render() {
@@ -45,10 +42,7 @@ class HomeScreen extends Component {
         ></Button>
 
         {/* TESTING AREA */}
-        {/* <Text>Welcome Home, {JSON.stringify(username)}</Text> */}
-        {/* <Text>Placeholder</Text> */}
-        {/* <Text>test: {JSON.stringify(test)}</Text> */}
-        <Text>{this.props.route.params.test}</Text>
+        <Text>Test result: {this.props.route.params.test}</Text>
         {/* END */}
 
         <Button

@@ -39,7 +39,7 @@ class LoginScreen extends Component {
 
         // navigate to HomeScreen and pass data
         this.props.navigation.navigate("Home", {
-          test: "unit_test_pass",
+          test: "PASS",
           name: "troy",
         });
 
