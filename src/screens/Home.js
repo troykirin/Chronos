@@ -53,7 +53,8 @@ class HomeScreen extends Component {
 
         {/* TESTING AREA */}
         <Text>Test result: {this.props.route.params.test}</Text>
-        <Text>Params: {JSON.stringify(test)}</Text>
+        <Text>params.test stringify: {JSON.stringify(test)}</Text>
+        <Text> params.test: {test}</Text>
         {/* END */}
 
         <Button
