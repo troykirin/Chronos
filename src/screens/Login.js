@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { View, Text, Button, setState, StyleSheet, Input } from "react-native";
 
 import Loader from "../components/Loader";
+import HomeScreen from "./Home";
 
 //On Login Press, change login state to true
 
@@ -13,7 +14,7 @@ class LoginScreen extends Component {
       mimin: "",
       login: false,
       loading: false,
-      username: "",
+      username: "troykirin",
       password: "",
     };
   }
@@ -35,10 +36,17 @@ class LoginScreen extends Component {
       console.log("Running settimeout");
       setTimeout(() => {
         this.setState({ loading: false });
-        this.props.navigation.navigate("Profile");
-      }, 2500);
+        // navigate to HomeScreen and pass data
+        this.props.navigation.navigate("Home", {
+          username: "unit_test_pass",
+        });
+        console.log(this.state.username);
+      }, 20);
     } else {
       console.log("State is true.");
+      console.log(
+        "Logic error occured. Your already logged in. How'd you get here?"
+      );
       this.setState({
         text:
           "Logic error occured. Your already logged in. How'd you get here?",
