@@ -14,9 +14,11 @@ import SettingsScreen from "./src/screens/Settings";
 import firebase from "firebase";
 firebase.initializeApp(firebaseConfig);
 import { firebaseConfig } from "./config";
-// create app navigator
+
+// Create stack navigator
 const Stack = createStackNavigator();
 
+// define screen stack
 function RootStack() {
   return (
     <Stack.Navigator>
@@ -29,6 +31,7 @@ function RootStack() {
   );
 }
 
+// first function ran as default export in App.js
 export default function App() {
   return (
     <NavigationContainer>
@@ -37,6 +40,7 @@ export default function App() {
   );
 }
 
+// Stylesheet
 const styles = StyleSheet.create({
   container: {
     flex: 1,
