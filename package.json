@@ -36,6 +36,7 @@
     "eslint": "6",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-react": "^7.20.0",
+    "jest": "^26.0.1",
     "react-devtools": "^3"
   },
   "private": true
