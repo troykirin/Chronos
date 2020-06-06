@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { View, Text, Button, setState, StyleSheet, Input } from "react-native";
+import { View, Text, Button, setState, StyleSheet } from "react-native";
 
 import Loader from "../components/Loader";
-import HomeScreen from "./Home";
+import TextInput from "../components/TextInput";
 
 //On Login Press, change login state to true
 
@@ -16,6 +16,7 @@ class LoginScreen extends Component {
       loading: false,
       username: "troykirin",
       password: "",
+      email: "",
     };
   }
 
@@ -58,17 +59,24 @@ class LoginScreen extends Component {
 
   render() {
     return (
-      <View>
+      <View style={page.container}>
         <Loader loading={this.state.loading}></Loader>
-        <Text style={styles.header}>Chronos TimeTracker</Text>
-        <Text style={styles.loginText}>Email</Text>
-        <Text style={styles.loginText}>Password</Text>
+        <Text style={page.header}>Chronos TimeTracker</Text>
+
+        <TextInput
+          style={input.standard}
+          inText={"Please enter your email here."}
+        />
+        <TextInput
+          style={input.standard}
+          inText={"Please enter your password here."}
+        />
+
         <Button
           title="Login"
           onPress={() => this.onButtonPress()}
           containerViewStyle={{ width: "100%", marginBottom: 20 }}
         ></Button>
-
         <Text style={styles.loginStatus}>{this.state.text}</Text>
       </View>
     );
@@ -77,19 +85,38 @@ class LoginScreen extends Component {
 
 export default LoginScreen;
 
-const styles = StyleSheet.create({
+const page = StyleSheet.create({
+  container: { flex: 1, padding: 24, backgroundColor: "#fff" },
   header: {
     fontSize: 30,
     alignSelf: "center",
   },
+});
+
+const input = StyleSheet.create({
+  standard: {
+    height: 40,
+    borderColor: "red",
+    borderWidth: 1,
+    alignItems: "center",
+  },
+});
+
+const styles = StyleSheet.create({
   loginText: {
     fontSize: 20,
-    padding: 20,
+    padding: 10,
     alignItems: "center",
     justifyContent: "center",
     alignSelf: "center",
   },
   loginStatus: {
     alignSelf: "center",
+  },
+  loginBox: {
+    height: 40,
+    borderColor: "gray",
+    borderWidth: 1,
+    alignItems: "center",
   },
 });
