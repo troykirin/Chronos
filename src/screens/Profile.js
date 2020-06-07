@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import { View, Text, Button, Image, StyleSheet } from "react-native";
 
 function ProfileScreen({ navigation, route }) {
-  const { username } = route.params;
+  const { username, email } = route.params;
   return (
     <View>
       <Text>Hi, {username}</Text>
+      <Text>Your email is: {email}</Text>
       <Button title="Go Back" onPress={() => navigation.goBack()}></Button>
       <Button
         title="Go Settings"
