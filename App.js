@@ -12,9 +12,9 @@ import ProfileScreen from "./src/screens/Profile";
 import SettingsScreen from "./src/screens/Settings";
 
 // firebase
-import firebase from "firebase";
-firebase.initializeApp(firebaseConfig);
-import { firebaseConfig } from "./config";
+// import firebase from "firebase";
+// firebase.initializeApp(firebaseConfig);
+// import { firebaseConfig } from "./config";
 
 // Create stack navigator
 const Stack = createStackNavigator();
