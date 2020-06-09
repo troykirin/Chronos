@@ -37,7 +37,7 @@ class LoadingScreen extends Component {
     return (
       <View style={styles.container}>
         <Button
-          title="Skip Loading Page"
+          title="Start App"
           onPress={() => this.props.navigation.navigate("Login")}
         ></Button>
       </View>
