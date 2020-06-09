@@ -1,9 +1,10 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 
-//Screens
+//  Screens
+
 import LoadingScreen from "./src/screens/Load";
 import HomeScreen from "./src/screens/Home";
 import LoginScreen from "./src/screens/Login";
