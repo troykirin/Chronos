@@ -1,27 +1,27 @@
-// Loading modal spinning view
+// In dev
 import React, { Component } from "react";
-import { StyleSheet, View, Modal, ActivityIndicator } from "react-native";
+import { StyleSheet, View, Modal, Text } from "react-native";
 
-const Loader = (props) => {
-  const { loading, ...attributes } = props;
+function Display(props) {
+  const { email, password, ...attributes } = props;
 
   return (
     <Modal
       transparent={true}
       animationType={"none"}
-      visible={loading}
+      visible={(email, password)}
       onRequestClose={() => {
         console.log("close modal");
       }}
     >
       <View style={styles.modalBackground}>
         <View style={styles.activityIndicatorWrapper}>
-          <ActivityIndicator animating={loading} />
+          <Text>Testing</Text>
         </View>
       </View>
     </Modal>
   );
-};
+}
 
 const styles = StyleSheet.create({
   modalBackground: {
@@ -42,4 +42,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Loader;
+export default Display;

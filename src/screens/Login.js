@@ -8,9 +8,13 @@ import {
   TextInput,
 } from "react-native";
 
+// Works as expected.
 import Loader from "../components/Loader";
-import ShowModal from "../components/showModal";
+
+// Debugging
+// import ModalOutput from "../components/modalOutput";
 // import TextInput from "../components/TextInput";
+// import ShowModal from "../components/showModal";
 
 //On Login Press, change login state to true
 
@@ -19,7 +23,6 @@ class LoginScreen extends Component {
     super(props);
     this.state = {
       loadAnimationText: "Logged out.",
-      mimin: "",
       login: false,
       loading: false,
       username: "troykirin",
@@ -28,7 +31,7 @@ class LoginScreen extends Component {
     };
   }
 
-  // CURRENT
+  // CURRENT ISSUE
   // trying to create a reference to change parent state from child components
   // this.changeChild = React.createRef();
 
@@ -69,7 +72,6 @@ class LoginScreen extends Component {
 
   runLoadAnimation = () => {
     console.log("Start loading animation.");
-    <Loader></Loader>;
 
     console.log("Running settimeout");
     setTimeout(() => {
@@ -96,14 +98,19 @@ class LoginScreen extends Component {
         " should match as expected output."
     );
 
-    // NOT WORKING
+    // DEBUGGING
     // this.setModalVisible(true);
     // <ShowModal />;
+  };
+
+  doNothing = () => {
+    console.log("Blank function as a placeholder.");
   };
 
   render() {
     return (
       <View style={page.container}>
+        {/* Sending in state of loading into render. */}
         <Loader loading={this.state.loading}></Loader>
         <Text style={page.header}>Chronos TimeTracker Chatbot</Text>
         <TextInput

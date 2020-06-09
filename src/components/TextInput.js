@@ -1,7 +1,9 @@
+// Play component
+
 import React, { Component } from "react";
 import { TextInput } from "react-native";
 
-export default function UselessTextInput({ inText, style }) {
+export default function LoginTextInput({ inText, style }) {
   const [value, onChangeText] = React.useState(inText);
 
   return (
