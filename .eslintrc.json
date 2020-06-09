@@ -1,9 +1,12 @@
 {
+  "root": true,
+  "parser": "babel-eslint",
   "env": {
     "browser": true,
     "commonjs": true,
     "es6": true,
-    "react-native/react-native": true
+    "react-native/react-native": true,
+    "jest": true
   },
 
   "plugins": ["react", "react-native", "react-hooks"],

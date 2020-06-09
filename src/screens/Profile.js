@@ -1,21 +1,27 @@
 import React, { Component } from "react";
 import { View, Text, Button, Image, StyleSheet } from "react-native";
+import { Header, Card } from "native-base";
 
 function ProfileScreen({ navigation, route }) {
   const { username, email } = route.params;
   return (
     <View>
-      <Text>Hi, {username}</Text>
-      <Text>Your email is: {email}</Text>
+      <Header>
+        <Text style={{ fontSize: 20 }}>Hi, {username}</Text>
+      </Header>
+      <Card>
+        <Text>Your email is: {email}</Text>
+        <Image
+          style={styles.image}
+          source={require("../../assets/profile_pic.jpg")}
+        />
+      </Card>
+
       <Button title="Go Back" onPress={() => navigation.goBack()}></Button>
       <Button
         title="Go Settings"
         onPress={() => navigation.navigate("Settings")}
       ></Button>
-      <Image
-        style={styles.image}
-        source={require("../../assets/profile_pic.jpg")}
-      />
     </View>
   );
 }
