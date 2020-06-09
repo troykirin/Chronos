@@ -8,14 +8,19 @@ npm-debug.*
 *.orig.*
 web-build/
 web-report/
+config.js
+
+# macOS
+.DS_Store
+
+# expo
+.expo-shared/
+.expo/
+.expo/packager-info.json
 .expo/*
 expo/*
 .expo/packager-info.json
 ./.expo/*
 
-# macOS
-.DS_Store
-.expo/packager-info.json
-
-.expo/
-config.js
+# vscode
+.vscode/
