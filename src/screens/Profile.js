@@ -22,7 +22,7 @@ function ProfileScreen({ navigation, route }) {
         title="Go Settings"
         onPress={() => navigation.navigate("Settings")}
       ></Button>
-      <Button title="ChatBot" onPress={() => navigation.navigate("Chat")} />
+      <Button title="ChatBot" onPress={() => navigation.navigate("Bot")} />
     </View>
   );
 }

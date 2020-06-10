@@ -11,7 +11,7 @@ import HomeScreen from "./src/screens/Home";
 import LoginScreen from "./src/screens/Login";
 import ProfileScreen from "./src/screens/Profile";
 import SettingsScreen from "./src/screens/Settings";
-// import ChatScreen from "./src/screens/Chat";
+import Bot from "./src/screens/Bot";
 
 // firebase
 // import firebase from "firebase";
@@ -31,7 +31,7 @@ function RootStack() {
       <Stack.Screen name="Loading" component={LoadingScreen} />
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="Login" component={LoginScreen} />
-      {/* <Stack.Screen name="Chat" component={ChatScreen} /> */}
+      <Stack.Screen name="Bot" component={Bot} />
       <Stack.Screen name="Profile" component={ProfileScreen} />
       <Stack.Screen name="Settings" component={SettingsScreen} />
     </Stack.Navigator>
@@ -43,7 +43,9 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
+        <Tab.Screen name="Login" component={LoginScreen} />
         <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Bot" component={Bot} />
         <Tab.Screen name="Profile" component={ProfileScreen} />
         <Tab.Screen name="Settings" component={SettingsScreen} />
       </Tab.Navigator>
