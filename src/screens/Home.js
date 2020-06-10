@@ -8,23 +8,23 @@ class HomeScreen extends Component {
     this.state = { count: 0 };
 
     // check for params passing
-    this.test_param_pass();
+    // this.test_param_pass();
   }
 
   // #Dev Tests
-  test_param_pass = (route, navigation) => {
-    console.log("Testing param passing between screens...");
+  // test_param_pass = (route, navigation) => {
+  //   console.log("Testing param passing between screens...");
 
-    // Grab params from navigation
-    const { test } = this.props.route.params;
+  //   // Grab params from navigation
+  //   const { test } = this.props.route.params;
 
-    // return logic
-    if (test != undefined) {
-      console.log(true);
-    } else {
-      console.log(false);
-    }
-  };
+  //   // return logic
+  //   if (test != undefined) {
+  //     console.log(true);
+  //   } else {
+  //     console.log(false);
+  //   }
+  // };
 
   // #Methods
 
@@ -42,7 +42,8 @@ class HomeScreen extends Component {
 
   render() {
     // Get Params from previous screen
-    const { username } = this.props.route.params;
+    // const { username } = this.props.route.params;
+    const { username } = "sample_username";
 
     return (
       <View style={styles.container}>
